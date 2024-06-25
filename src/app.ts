@@ -1,6 +1,5 @@
 import express, { Application } from 'express'
 import connectDb from './config/database'
-import dotenv from './config/dotenv'
 import gameRoutes from './routes/gameRoutes'
 
 const app: Application = express()

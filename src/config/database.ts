@@ -6,8 +6,6 @@ const connectDb = async () => {
         await mongoose.connect(dotenv.MONGO_URI, {
             dbName: dotenv.DATABASE_NAME
         })
-
-        console.log('MongoDb connected...')
     } catch (err: any) {
         console.error(err.message)
         process.exit(1)
