@@ -1,10 +1,10 @@
 import { Router } from 'express'
 import {
     createGame,
-    getGames,
+    deleteGame,
     getGame,
-    updateGame,
-    deleteGame
+    getGames,
+    updateGame
 } from '../controller/gameController'
 
 const router: Router = Router()

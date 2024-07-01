@@ -1,25 +1,27 @@
 import { Request, Response } from 'express'
 import Game, { IGame } from '../models/gameModel'
 
+
+
 export const createGame = async (
-    req: Request, 
+    req: Request,
     res: Response
 ): Promise<void> => {
-    const { 
-        name, 
-        description, 
-        releaseOn, 
-        isSinglePlayer, 
-        difficulty 
+    const {
+        name,
+        description,
+        releaseOn,
+        isSinglePlayer,
+        difficulty
     } = req.body
 
     try {
         const game: IGame = new Game({
-            name, 
-            description, 
-            releaseOn, 
-            isSinglePlayer, 
-            difficulty 
+            name,
+            description,
+            releaseOn,
+            isSinglePlayer,
+            difficulty
         })
 
         await game.save()
